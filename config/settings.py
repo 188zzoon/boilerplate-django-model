@@ -37,6 +37,7 @@ DJANGO_APPDS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "conversations.apps.ConversationsConfig",
 ]
 THIRD_PARTY_APPS = ["django_countries"]
 
