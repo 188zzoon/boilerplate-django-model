@@ -38,8 +38,7 @@ DJANGO_APPDS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
-
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = ["django_countries"]
 
 PROJECT_APPS = [
     "core.apps.CoreConfig",
