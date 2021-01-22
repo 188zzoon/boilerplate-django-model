@@ -36,7 +36,6 @@ class RoomAdmin(admin.ModelAdmin):
                 "classes": ("collapse"),
                 "fields": ("amenities", "facilities", "house_rules"),
             },
-            {"fields": ("amenities", "facilities", "house_rules")},
         ),
         ("Last Details", {"fields": ("host",)}),
     )
