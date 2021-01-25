@@ -5,7 +5,13 @@ from . import models
 
 @admin.register(models.RoomType, models.Facility, models.Amenity, models.HouseRule)
 class ItemAdmin(admin.ModelAdmin):
-    pass
+    """ Item Admin Definition """
+
+    list_display = ("name", "used_by")
+
+    def used_by(self, obj):
+        return obj.rooms.count()
+    
 
 
 class PhotoInline(admin.TabularInline):
