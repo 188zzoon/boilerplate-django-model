@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from room.models import Facility
+from rooms.models import Facility
 
 
 class Command(BaseCommand):
