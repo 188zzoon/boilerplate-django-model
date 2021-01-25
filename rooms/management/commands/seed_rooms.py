@@ -5,9 +5,11 @@ from django.contrib.admin.utils import flatten
 from rooms import models as room_models
 from users import models as user_models
 
+
 class Command(BaseCommand):
 
-    help = "This command creates amentities"
+    # help = "This command creates amentities"
+    help = "This command creates rooms"
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -56,7 +58,7 @@ class Command(BaseCommand):
                 room.facilities.add(f)
             for r in rules:
                 magic_number = random.randint(0, 15)
-                if magic_number %2 == 0:
+                if magic_number % 2 == 0:
                     room.house_rules.add(r)
 
         self.stdout.write(self.style.SUCCESS(f"{number} rooms created!"))
