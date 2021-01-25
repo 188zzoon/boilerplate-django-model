@@ -5,6 +5,7 @@ from reviews import models as review_models
 from users import models as user_models
 from rooms import models as room_models
 
+
 class Command(BaseCommand):
 
     help = "This command creates reviews"
@@ -18,7 +19,7 @@ class Command(BaseCommand):
         number = options.get("number")
         seeder = Seed.seeder()
         users = user_models.User.objects.all()
-        rooms= room_models.Room.objects.all()
+        rooms = room_models.Room.objects.all()
         seeder.add_entity(
             review_models.Review,
             number,
